@@ -18,3 +18,24 @@ Please read the [contribution guidelines](https://github.com/opencv/opencv/wiki/
 * Include tests and documentation;
 * Clean up "oops" commits before submitting;
 * Follow the [coding style guide](https://github.com/opencv/opencv/wiki/Coding_Style_Guide).
+
+
+depends
+
+yum groupinstall "Development Tools"
+yum install ncurses-devel zlib-devel texinfo gtk+-devel gtk2-devel qt-devel tcl-devel tk-devel kernel-headers kernel-devel
+
+build
+
+1.
+mkdir build
+cd build
+
+2.
+cmake –D CMAKE_BUILD_TYPE=Release –D CMAKE_INSTALL_PREFIX=/usr/local/opencv ..
+
+3.
+make
+
+4.
+make install
